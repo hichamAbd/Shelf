@@ -2,7 +2,7 @@
 // at once; the saved copy is used when there is no connection.
 // The cache name starts with "shelf-" because every app on this web
 // address shares the same browser storage.
-const CACHE = "shelf-v2";
+const CACHE = "shelf-v3";
 
 const FILES = [
   "./",
