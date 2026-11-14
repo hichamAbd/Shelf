@@ -1,0 +1,168 @@
+:root {
+  --paper: #fafafc;
+  --raised: #ffffff;
+  --ink: #15151f;
+  --quiet: #5e5e6e;
+  --line: #e2e2ea;
+  --accent: #4a3fc4;
+  --press: #f0f0f6;
+  --mark-b: #b9b3f2;
+  --icon-ring: rgba(21, 21, 31, 0.08);
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121218;
+    --raised: #1a1a22;
+    --ink: #ededf5;
+    --quiet: #a2a2b4;
+    --line: #2b2b37;
+    --accent: #a99eff;
+    --press: #24242e;
+    --mark-b: #5d55b8;
+    --icon-ring: rgba(255, 255, 255, 0.16);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.45 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 560px;
+  margin: 0 auto;
+  padding:
+    calc(28px + env(safe-area-inset-top))
+    max(20px, env(safe-area-inset-right))
+    calc(32px + env(safe-area-inset-bottom))
+    max(20px, env(safe-area-inset-left));
+}
+
+/* The header sits on a plank: the three objects stand on the same line. */
+.top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 0;
+  border-bottom: 2px solid var(--ink);
+}
+
+.top-text { padding-bottom: 14px; min-width: 0; }
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.lede { margin: 6px 0 0; color: var(--quiet); }
+
+.mark { flex: none; width: 72px; height: 44px; display: block; overflow: visible; }
+.mark-a { fill: var(--accent); }
+.mark-b { fill: var(--mark-b); }
+.mark-c { fill: var(--ink); }
+
+.apps {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 14px;
+  min-height: 80px;
+  padding: 14px 16px;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Divider starts at the text column, so the icons read as one column. */
+.apps li + li .app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 82px;
+  right: 0;
+  border-top: 1px solid var(--line);
+}
+
+.app:active { background: var(--press); }
+
+.app:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  border-radius: 16px;
+}
+
+.app-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px var(--icon-ring);
+}
+
+.app-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.app-name {
+  min-width: 0;
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.app-what {
+  display: block;
+  margin-top: 2px;
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--quiet);
+  text-wrap: pretty;
+}
+
+.app-kind {
+  flex: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.note {
+  margin: 18px 4px 0;
+  font-size: 13px;
+  color: var(--quiet);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .app { transition: background-color 120ms ease-out; }
+}
