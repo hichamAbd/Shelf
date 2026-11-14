@@ -38,6 +38,13 @@ export const apps = [
     icon: "zikr-ring.svg",
   },
   {
+    name: "VibeCheck",
+    what: "Today's mood, shared with friends and encrypted.",
+    kind: "Web",
+    url: "https://hichamabd.github.io/VibeCheck/",
+    icon: "vibecheck.svg",
+  },
+  {
     name: "Zikr Ring",
     what: "The ring companion as an Android app.",
     kind: "Android",

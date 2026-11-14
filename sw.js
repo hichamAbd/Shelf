@@ -2,7 +2,7 @@
 // at once; the saved copy is used when there is no connection.
 // The cache name starts with "shelf-" because every app on this web
 // address shares the same browser storage.
-const CACHE = "shelf-v1";
+const CACHE = "shelf-v2";
 
 const FILES = [
   "./",
@@ -20,6 +20,7 @@ const FILES = [
   "icons/apps/stripper.svg",
   "icons/apps/zikr-ring.svg",
   "icons/apps/reel-riot.png",
+  "icons/apps/vibecheck.svg",
 ];
 
 self.addEventListener("install", (event) => {
