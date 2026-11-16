@@ -45,6 +45,13 @@ export const apps = [
     icon: "vibecheck.svg",
   },
   {
+    name: "Sur le bout de la langue",
+    what: "A short French challenge every day, to bring the words back.",
+    kind: "Web",
+    url: "https://hichamabd.github.io/BoutDeLaLangue/",
+    icon: "bout-de-la-langue.svg",
+  },
+  {
     name: "Zikr Ring",
     what: "The ring companion as an Android app.",
     kind: "Android",
