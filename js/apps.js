@@ -52,6 +52,13 @@ export const apps = [
     icon: "bout-de-la-langue.svg",
   },
   {
+    name: "Claude en clair",
+    what: "A plain-French guide to getting the most out of Claude.",
+    kind: "Web",
+    url: "https://hichamabd.github.io/ClaudeEnClair/",
+    icon: "claude-en-clair.svg",
+  },
+  {
     name: "Zikr Ring",
     what: "The ring companion as an Android app.",
     kind: "Android",
