@@ -59,6 +59,13 @@ export const apps = [
     icon: "claude-en-clair.svg",
   },
   {
+    name: "Dawnline",
+    what: "Where the sun is, and every prayer-time convention side by side.",
+    kind: "Web",
+    url: "https://hichamabd.github.io/Dawnline/",
+    icon: "dawnline.svg",
+  },
+  {
     name: "Zikr Ring",
     what: "The ring companion as an Android app.",
     kind: "Android",
